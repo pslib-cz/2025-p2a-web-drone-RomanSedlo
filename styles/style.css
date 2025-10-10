@@ -7,15 +7,15 @@
     :root {
         color-scheme: light dark;
         --header-bg-color: light-dark(#3B3E40, #3B3E40);
-        --primary-color: light-dark(#66D4D4, #66d4d444);
-        --secondary-color: #fff;
+        --primary-color: light-dark(#66D4D4, #478f8f);
+        --secondary-color:light-dark(#fff,#fff);
         --text-color: light-dark(#000, #fff);
         --header-text-color: light-dark(#fff, #fff);
         --bg-color: light-dark(#fff, #000);
     }
     html {
         font-family: 'Open Sans', sans-serif;
-        font-size: 100%;/*16px default*/
+        font-size: 100%; /*16px default*/
         color:var(--text-color);
     }
 }
@@ -24,6 +24,18 @@
     body {
         background-color: var(--bg-color);
     }
+    main {
+        max-width: margin auto;
+    }
+    h1 {
+        font-size: 4rem; /* 60px by default */
+        font-weight: 600; /* 800 */
+    }
+    .img-fluid {
+        display: block;
+        width: 100%;
+        height: auto;
+    }
     .header{
         background-image: url('../images/images/header-2560w.webp');
         background-size: cover;
@@ -31,6 +43,7 @@
         background-color: var(--header-bg-color);
         color: var(--header-text-color);
         line-height: 1.5;
+        padding: 1rem;
     }
     .header__nav {
         text-align: center;
@@ -38,5 +51,12 @@
     .header__link {
         display: inline-block;
         padding-top: 1em;
+    }
+    .img-block {
+        margin: 0;
+    }
+    .img-block__caption {
+        text-align: center;
+        margin-top: 0.5em;
     }
 }
