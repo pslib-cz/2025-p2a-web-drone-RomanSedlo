@@ -13,16 +13,16 @@
         --header-text-color: light-dark(#fff, #fff);
         --bg-color: light-dark(#fff, #000);
     }
+    html {
+        font-family: 'Open Sans', sans-serif;
+        font-size: 100%;/*16px default*/
+        color:var(--text-color);
+    }
 }
 
 @layer design {
     body {
         background-color: var(--bg-color);
-    }
-    html {
-        font-family: 'Open Sans', sans-serif;
-        font-size: 100%;/*16px default*/
-        color:var(--text-color);
     }
     .header{
         background-image: url('../images/images/header-2560w.webp');
