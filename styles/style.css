@@ -12,6 +12,7 @@
         --text-color: light-dark(#000, #fff);
         --header-text-color: light-dark(#fff, #fff);
         --bg-color: light-dark(#fff, #000);
+        --underline-color: light-dark(#646668, #546068);
     }
     html {
         font-family: 'Open Sans', sans-serif;
@@ -23,17 +24,20 @@
 @layer design {
     body {
         background-color: var(--bg-color);
+        margin: 0;
     }
     main {
         max-width: margin auto;
+        padding: 2rem;
     }
     h1 {
-        font-size: 4rem; /* 60px by default */
-        font-weight: 600; /* 800 */
+        font-size: 4rem;
+        font-weight: 800;
     }
     footer {
         text-align: center;
         padding: 4em;
+        background-color: var(--header-bg-color);
     }
     .img-fluid {
         display: block;
@@ -41,20 +45,35 @@
         height: auto;
     }
     .header{
-        background-image: url('../images/images/header-2560w.webp');
+        background-image: url('../images/header-2560w.webp');
         background-size: cover;
         background-position: top left;
         background-color: var(--header-bg-color);
         color: var(--header-text-color);
         line-height: 1.5;
-        padding: 1rem;
+        padding: 2rem;
     }
     .header__nav {
         text-align: center;
+        margin-bottom: 3rem;
+    }
+    .header__text {
+        max-width: 50rem;
     }
     .header__link {
         display: inline-block;
-        padding-top: 1em;
+        padding: 0.5em 2em 0.5em 2em;
+        text-decoration: none;
+        font-weight: bold;
+        background-color: var(--header-text-color);
+        color: var(--header-bg-color);
+        border-radius: 0.5em;
+    }
+    .header__link:hover{
+        text-decoration: underline;
+        text-decoration-color: var(--underline-color);
+        color: var(--bg-color);
+        background-color: var(--text-color);
     }
     .img-block {
         margin: 0;
@@ -88,5 +107,12 @@
     .gallery__item--w100 {
         width: calc(100% - 2em);
     }
-
+    .footer {
+        color: var(--header-text-color);
+        text-decoration: none;
+    }
+    .footer:hover {
+        text-decoration: underline;
+        text-decoration-color: var(--underline-color);
+    }
 }
