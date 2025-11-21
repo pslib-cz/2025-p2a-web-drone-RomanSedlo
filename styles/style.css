@@ -39,6 +39,9 @@
         padding: 4em;
         background-color: var(--header-bg-color);
     }
+    p, h3, h2 {
+        margin: 0;
+    }
     .img-fluid {
         display: block;
         width: 100%;
@@ -87,6 +90,10 @@
     }
     .list__item::marker {
         color: var(--primary-color);
+    }
+    .border--primary {
+        border: var(--primary-color) solid 3px;
+        padding: 2em;
     }
     .card {
         max-width: 30rem;
